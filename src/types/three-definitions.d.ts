@@ -2,6 +2,17 @@
 import * as React from 'react';
 import * as THREE from 'three';
 
+// Add explicit import for OrbitControls
+declare module 'three/examples/jsm/controls/OrbitControls.js' {
+  export class OrbitControls {
+    constructor(camera: THREE.Camera, domElement: HTMLElement);
+    update(): void;
+    enableDamping: boolean;
+    dampingFactor: number;
+    enableZoom: boolean;
+  }
+}
+
 // Extend JSX.IntrinsicElements with Three.js elements
 declare global {
   namespace JSX {

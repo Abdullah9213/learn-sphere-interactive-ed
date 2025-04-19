@@ -1,8 +1,8 @@
-
 import React, { useRef, useEffect } from "react";
 import { Video, MessageCircle, FileText, Bookmark, User, BarChart } from "lucide-react";
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+// Fix the import for OrbitControls
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 // Feature card component
 const FeatureCard = ({

@@ -1,7 +1,6 @@
-
 import { Layout } from "@/components/layout/Layout";
-import { Hero3DSection } from "@/components/landing/Hero3DSection";
-import { Features3DSection } from "@/components/landing/Features3DSection";
+import { HeroSection } from "@/components/landing/HeroSection";
+import { FeaturesSection } from "@/components/landing/FeaturesSection";
 import { HowItWorksSection } from "@/components/landing/HowItWorksSection";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
 import { CTASection } from "@/components/landing/CTASection";
@@ -9,8 +8,8 @@ import { CTASection } from "@/components/landing/CTASection";
 const Index = () => {
   return (
     <Layout>
-      <Hero3DSection />
-      <Features3DSection />
+      <HeroSection />
+      <FeaturesSection />
       <HowItWorksSection />
       <TestimonialsSection />
       <CTASection />

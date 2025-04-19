@@ -62,6 +62,7 @@ declare global {
         castShadow?: boolean;
         "shadow-mapSize"?: [number, number] | THREE.Vector2;
       };
+      // Add other Three.js elements as needed
     }
   }
 }

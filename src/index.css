@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -197,66 +198,6 @@
   }
 }
 
-@keyframes glitch {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    transform: translate(-2px, -2px);
-  }
-  60% {
-    transform: translate(2px, 2px);
-  }
-  80% {
-    transform: translate(2px, -2px);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
-
-@keyframes cyber-glow {
-  0% {
-    box-shadow: 0 0 5px 0 rgba(124, 58, 237, 0.5),
-                0 0 10px 2px rgba(139, 92, 246, 0.3),
-                0 0 15px 4px rgba(167, 139, 250, 0.1);
-  }
-  50% {
-    box-shadow: 0 0 10px 2px rgba(124, 58, 237, 0.8),
-                0 0 20px 5px rgba(139, 92, 246, 0.6),
-                0 0 30px 10px rgba(167, 139, 250, 0.3);
-  }
-  100% {
-    box-shadow: 0 0 5px 0 rgba(124, 58, 237, 0.5),
-                0 0 10px 2px rgba(139, 92, 246, 0.3),
-                0 0 15px 4px rgba(167, 139, 250, 0.1);
-  }
-}
-
-@keyframes text-gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes futuristic-scan {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 200% 0%;
-  }
-}
-
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
@@ -291,49 +232,6 @@
   animation: gradient-move 3s ease infinite;
 }
 
-.animate-glitch {
-  animation: glitch 0.5s cubic-bezier(.25, .46, .45, .94) both infinite;
-  animation-play-state: paused;
-}
-
-.animate-glitch:hover {
-  animation-play-state: running;
-}
-
-.animate-cyber-glow {
-  animation: cyber-glow 3s infinite;
-}
-
-.animate-gradient-text {
-  background-size: 200% auto;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: text-gradient-shift 3s linear infinite;
-}
-
-.animate-scan-line {
-  position: relative;
-  overflow: hidden;
-}
-
-.animate-scan-line::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 8px;
-  background: linear-gradient(90deg, 
-    rgba(124, 58, 237, 0) 0%, 
-    rgba(124, 58, 237, 0.8) 50%, 
-    rgba(124, 58, 237, 0) 100%);
-  opacity: 0.5;
-  background-size: 200% 100%;
-  animation: futuristic-scan 2s linear infinite;
-}
-
 /* Interactive grid background - visible in dark mode */
 .bg-grid-white\/5 {
   background-image: 
@@ -348,17 +246,6 @@
 /* Enhanced Glass morphism effects */
 .glass-card {
   @apply backdrop-blur-lg bg-white/5 border border-white/10 shadow-lg;
-}
-
-.glass-card-interactive {
-  @apply glass-card transition-all duration-300;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-}
-
-.glass-card-interactive:hover {
-  @apply bg-white/10 border-primary/50;
-  transform: translateY(-5px) rotateX(5deg) rotateY(5deg);
 }
 
 /* 3D button effect */
@@ -392,29 +279,4 @@
 
 .hover-scale:hover {
   transform: scale(1.05);
-}
-
-.card-3d {
-  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  transform-style: preserve-3d;
-}
-
-.card-3d:hover {
-  transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.05);
-}
-
-.border-glow {
-  position: relative;
-}
-
-.border-glow::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  background: linear-gradient(45deg, #6d28d9, #f97316, #6d28d9);
-  border-radius: inherit;
-  z-index: -1;
-  animation: text-gradient-shift 3s linear infinite;
-  background-size: 200% 200%;
-  filter: blur(4px);
 }

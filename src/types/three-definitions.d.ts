@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import * as THREE from 'three';
 
@@ -10,6 +9,8 @@ declare module 'three/examples/jsm/controls/OrbitControls.js' {
     enableDamping: boolean;
     dampingFactor: number;
     enableZoom: boolean;
+    autoRotate: boolean;
+    autoRotateSpeed: number;
   }
 }
 
@@ -73,7 +74,6 @@ declare global {
         castShadow?: boolean;
         "shadow-mapSize"?: [number, number] | THREE.Vector2;
       };
-      // Add other Three.js elements as needed
     }
   }
 }
